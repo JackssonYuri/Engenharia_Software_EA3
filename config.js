@@ -1,6 +1,7 @@
 const config = {
-  
-  "IRoutes" : "UserRoutes.js",
-  "IUserController" : "UserController.js"
+  "IRoutes" : "Routes.js",
+  "IUserController" : "UserController.js",
+  "IIngredienteController" : "IngredienteController.js",
+  "IClienteController" : "ClienteController.js"
 };
 module.exports = config;

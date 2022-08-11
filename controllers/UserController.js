@@ -1,4 +1,4 @@
-const IUserController = require('./IUserController.js');
+const IUserController = require('./interfaces/IUserController.js');
 
 const mongoose = require('mongoose');
 const User = require('../models/User');
@@ -17,6 +17,7 @@ class UserController extends IUserController{
     }
   async show(req, res)
     {
+        console.log(req.params, "req");
         let users = await User.find();
         return res.json(users);
     }
