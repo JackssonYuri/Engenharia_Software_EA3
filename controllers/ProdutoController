@@ -1,0 +1,19 @@
+const IProdutoController = require('./interfaces/IProdutoController.js');
+
+const mongoose = require('mongoose');
+const Produto = require('../models/Produto');
+
+class ProdutoController extends IProdutoController {
+  constructor() {
+    super();
+
+  }
+  async buscarProdutos(req, res) {
+    
+    let produto = await Produto.findOne({ codigo: req.params.codigo, });
+
+    return res.json(produto);
+
+  }
+  
+module.exports = ProdutoController;
